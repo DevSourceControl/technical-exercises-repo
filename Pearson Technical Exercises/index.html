@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pearson Technical Exercises</title>
+    <link href="./site.css" rel="stylesheet">   
+    <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" /> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+          <div class="form">
+              <div class="left-side">
+                  <div class="left-heading">
+                    <h2>Technical Exercises</h3>
+                  </div>
+                  <div class="steps-content">
+                      <h3>Exercise <span class="step-number">1</span></h3>
+                      <p class="step-number-content active">Test Description: Create a function that will return the roman numerals for a given non-negative, non-zero integer.</p>
+                      <p class="step-number-content d-none">Test Description: Create a function that will return the roman numerals for a given non-negative, non-zero integer.</p>
+                      <p class="step-number-content d-none">Test Description: Create a function which, given an integer n, will return the sum of numbers up to but not including n. For values of n < 1 simply return 0.</p>
+                      <p class="step-number-content d-none">Test Description: Create a function which returns the minimum number of pennies to reach a given total.</p>
+                  </div>
+                  <ul class="progress-bar">
+                      <li class="active">Palindromes</li>
+                      <li>Romans</li>
+                      <li>Fibonnaci</li>
+                      <li>Coin Change</li>
+                  </ul>
+              </div>
+              <div class="middle-side">
+                  <div class="main active">
+                      <img class="centre" src="https://plc.pearson.com/sites/pearson-corp/files/logo.png">
+                      <div class="text">
+                          <h2>Exercise 1 - Palindromes</h2>
+                          <p>Please enter a word, letter or number to determine if it is a Palindrome</p>
+                      </div>
+                      <div class="input-text">
+                          <div class="input-div">
+                              <input type="text" id="palindromeValue" placeholder="Please input a value" required require>
+                              <button class="btn-success" id="validateAnswer">Check Answer</button>
+                              <button class="btn-info testCases" id="palindromeTestBtn" style="display:none;">View Test Cases</button>
+                          </div>             
+                      </div>
+                        <img src="./loading.gif" class="loading" style="display: none;">       
+                      <div class="resultMessages" class="text" style="display:none;">
+                            <p id="palindromeSuccess" class="messages answerSuccess" style="display:none;">The answer provided is a Palindrome</p>
+                            <p id="palindromeFailure" class="messages answerFailure" style="display:none;">The answer provided is not a Palindrome</p>
+                      </div>
+                      <div class="buttons">
+                           <button id="nextBtn" class="btn-primary" style="display:none;">Next Step</button>
+                      </div>
+                  </div>
+                  <div class="main">
+                    <img class="centre" src="https://plc.pearson.com/sites/pearson-corp/files/logo.png">
+                      <div class="text">
+                          <h2>Exercise 2 - Romans</h2>
+                          <p>Please input a numerical value</p>
+                      </div>
+                      <div class="input-text">
+                          <div class="input-div">
+                              <input type="number" id="romanValue" placeholder="Please input a value" required require min="1" step="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                              <button class="btn-success" id="validateAnswer">Check Answer</button>
+                              <button class="btn-info testCases" id="romanNumeralTestBtn" style="display:none;">View Test Cases</button>
+                          </div>             
+                      </div>
+                      <img src="./loading.gif" class="loading" style="display: none;">       
+                      <div class="resultMessages" class="text" style="display:none;">
+                            <p id="romanNumeralAnswer" class="messages answerSuccess paraFormat" style="display:none;width:70%;"></p>
+                      </div>
+                      <div class="buttons button_space">
+                          <button id="backBtn" class="btn-secondary">Back</button>
+                           <button id="nextBtn" class="btn-primary" style="display:none;">Next Step</button>
+                      </div>
+                  </div>
+                  <div class="main">
+                      <img class="centre" src="https://plc.pearson.com/sites/pearson-corp/files/logo.png">
+                      <div class="text">
+                          <h2>Exercise 3 - Fibonacci</h2>
+                          <p>Please input a number</p>
+                      </div>
+                      <div class="input-text">
+                          <div class="input-div">
+                              <input type="number" id="fibonnaciValue" placeholder="Please input a value" required require min="1" step="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                              <button class="btn-success" id="validateAnswer">Check Answer</button>
+                              <button class="btn-info testCases" id="fibonnaciTestBtn" style="display:none;">View Test Cases</button>
+                          </div>             
+                      </div>
+                     <img src="./loading.gif" class="loading" style="display: none;">       
+                      <div class="resultMessages" class="text" style="display:none;">
+                            <p id="fibonnaciAnswer" class="messages answerSuccess paraFibFormat" style="width: 95%"></p>
+                      </div>
+                      <div class="buttons button_space">
+                          <button id="backBtn" class="btn-secondary">Back</button>
+                           <button id="nextBtn" class="btn-primary" style="display:none;">Next Step</button>
+                      </div>
+                  </div>        
+                  <div class="main">
+                     <img class="centre" src="https://plc.pearson.com/sites/pearson-corp/files/logo.png">
+                      <div class="text">
+                          <h2>Exercise 4 - Coin Change</h2>
+                          <p>Please input a number of coins</p>
+                      </div>
+                      <div class="input-text">
+                          <div class="input-div">
+                              <input type="number" id="changeValue" placeholder="Input a penny value" required require min="1" step="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                              <button class="btn-success" id="validateAnswer">Check Answer</button>
+                              <button class="btn-info testCases" id="coinTestBtn" style="display:none;">View Test Cases</button>
+                          </div>             
+                      </div>
+                     <img src="./loading.gif" class="loading" style="display: none;">       
+                      <div class="resultMessages" class="text" style="display:none;">
+                            <p id="coinAnswer" class="messages answerSuccess paraCustomFormat" style="display:none;"></p>
+                      </div>
+                      <div class="buttons button_space">
+                          <button id="backBtn" class="btn-secondary">Back</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="right-side" style="display:none;">
+                <div class="right-heading">
+                  <h2>Test Cases</h3>
+                </div>
+                <div id="mocha" style="margin:0px;margin-left:-30px;"></div>
+            </div>
+          </div>
+      </div>
+  </div>
+    <script src="https://unpkg.com/chai@4.1.2/chai.js"></script>
+    <script src="https://unpkg.com/mocha@4.0.1/mocha.js"></script>
+    <script>
+        mocha.setup('bdd');
+        mocha.setup('tdd');
+    </script>
+    <script src="main.js"></script>
+    <script src="test.js"></script>
+    <script>
+        mocha.checkLeaks();
+        mocha.run();
+    </script>
+  </body>
+</html>
